@@ -3,6 +3,7 @@
     <TargetFramework>net48</TargetFramework>
     <OutputType>WinExe</OutputType>
     <UseWindowsForms>true</UseWindowsForms>
+    <FileVersion>1.0.0</FileVersion> 
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Data.DataSetExtensions" />
