@@ -11,3 +11,6 @@ TestResults
 # suo files
 *.suo
 packages/
+
+.vs/
+*.user
