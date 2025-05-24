@@ -38,6 +38,10 @@ namespace HL7Snoop
 
         private System.Windows.Forms.Label label1;
 
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripTbMessage;
+
+        private System.Windows.Forms.ToolStripMenuItem menuItemLoadFromFile;
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -77,6 +81,8 @@ namespace HL7Snoop
             this.tbVersion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxEmptyFields = new System.Windows.Forms.CheckBox();
+            this.contextMenuStripTbMessage = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuItemLoadFromFile = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.treeListView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,6 +183,7 @@ namespace HL7Snoop
             this.tbMessage.TabIndex = 9;
             this.tbMessage.WordWrap = false;
             this.tbMessage.TextChanged += new System.EventHandler(this.tbMessage_TextChanged);
+            this.tbMessage.ContextMenuStrip = this.contextMenuStripTbMessage;
             // 
             // tbVersion
             // 
@@ -206,6 +213,20 @@ namespace HL7Snoop
             this.checkBoxEmptyFields.TabIndex = 12;
             this.checkBoxEmptyFields.Text = "Display Empty fields";
             this.checkBoxEmptyFields.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStripTbMessage
+            // 
+            this.contextMenuStripTbMessage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemLoadFromFile});
+            this.contextMenuStripTbMessage.Name = "contextMenuStripTbMessage";
+            this.contextMenuStripTbMessage.Size = new System.Drawing.Size(181, 48);
+            // 
+            // menuItemLoadFromFile
+            // 
+            this.menuItemLoadFromFile.Name = "menuItemLoadFromFile";
+            this.menuItemLoadFromFile.Size = new System.Drawing.Size(180, 22);
+            this.menuItemLoadFromFile.Text = "Load from file...";
+            this.menuItemLoadFromFile.Click += new System.EventHandler(this.menuItemLoadFromFile_Click);
             // 
             // MainForm
             // 

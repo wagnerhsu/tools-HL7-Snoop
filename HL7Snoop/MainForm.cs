@@ -71,6 +71,27 @@ namespace HL7Snoop
             }
         }
 
+        // Add handler for context menu item
+        private void menuItemLoadFromFile_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string fileContent = System.IO.File.ReadAllText(openFileDialog.FileName);
+                        tbMessage.Text = fileContent;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error reading file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
         #region Hl7Parsing functions
 
         /// <summary>
